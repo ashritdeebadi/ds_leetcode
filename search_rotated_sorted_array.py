@@ -10,6 +10,9 @@ class Solution:
 
         Time Complexity     : O(log(n))
         Space COmplexity    : O(1) 
+
+        Reference           : https://www.youtube.com/watch?v=QdVrY3stDD4
+
         """
 
         # Finding pivot index
