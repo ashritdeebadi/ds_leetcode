@@ -50,6 +50,7 @@ class Solution:
             elif nums[mid] > target:
                 right = mid - 1
             else:
+                # be careful over here if you wont increment it will fail for NOT FOUND (-1) cases
                 left = mid + 1
         return -1
 
