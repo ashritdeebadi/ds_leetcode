@@ -18,7 +18,7 @@ class Solution:
         # Finding pivot index
 
         left = 0
-        right = len(nums)
+        right = len(nums)-1
 
         while left < right:
 
@@ -42,13 +42,13 @@ class Solution:
         else:
             right = start-1
 
-        while(left <= right):
+        while(left < right):
             mid = left+(right-left)//2
 
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
-                right = mid - 1
+                right = mid
             else:
                 # be careful over here if you wont increment it will fail for NOT FOUND (-1) cases
                 left = mid + 1

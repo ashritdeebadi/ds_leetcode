@@ -13,9 +13,9 @@ class BinaryTree:
                 return mid
 
             if target > arr[mid]:  # element present in right
-                return self.binary_search_recursive(arr, target, mid, right)
+                return self.binary_search_recursive(arr, target, mid+1, right)
             else:  # element present in left
-                return self.binary_search_recursive(arr, target, left, mid-1)
+                return self.binary_search_recursive(arr, target, left, mid)
         else:
             return -1
 
@@ -32,7 +32,7 @@ class BinaryTree:
             if target > arr[mid]:
                 left = mid + 1
             else:
-                right = mid-1
+                right = mid
 
         return -1
 
@@ -40,6 +40,6 @@ class BinaryTree:
 arr = [1, 2, 3, 5, 6, 8, 10]
 
 ans = BinaryTree()
-print(ans.binary_search_recursive(arr, 100, 0, len(arr)))
+print(ans.binary_search_recursive(arr, 10, 0, len(arr)))
 
-print(ans.binary_search_iter(arr, 20))
+print(ans.binary_search_iter(arr, 10))
