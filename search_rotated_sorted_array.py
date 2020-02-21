@@ -8,6 +8,8 @@ class Solution:
         2) Binary search at left if the target is less than the pivot index 
         3) Binary search at right if the target is greater than pivot index
 
+        Time Complexity     : O(log(n))
+        Space COmplexity    : O(1) 
         """
 
         # Finding pivot index
